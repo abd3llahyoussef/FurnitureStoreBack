@@ -1,0 +1,2 @@
+DROP TABLE Roles;
+DROP TYPE RoleEnum;

@@ -1,0 +1,7 @@
+CREATE TABLE Category (
+    categoryId SERIAL PRIMARY KEY,
+    categoryName varchar(255) NOT NULL,
+    description text,
+    CreatedAt TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
