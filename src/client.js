@@ -2,7 +2,7 @@ import {Pool} from 'pg';
 import dotenv from 'dotenv';
 import path from 'path';
 
-dotenv.config({ path: path.resolve(process.cwd(), 'src', '.env') });
+dotenv.config();
 
 const { POSTGRES_HOST, POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DATABASE, POSTGRES_PORT } = process.env;
 
