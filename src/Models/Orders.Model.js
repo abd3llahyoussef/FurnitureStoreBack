@@ -96,7 +96,7 @@ export class OrdersModel {
     async getOrdersByUserPagination({ fk_userId, pageNumber, pageSize }) {
         const conn = await client.connect();
         try {
-            const sql = `SELECT o.*, u.username FROM Orders o INNER JOIN users u ON u.userid = o.fk_userId  WHERE fk_userId=$1 LIMIT $2 OFFSET $3`;
+            const sql = `SELECT o.*, u.username FROM Orders o INNER JOIN users u ON u.userid = o.fk_userId  WHERE fk_userId=$1 Order by orderid asc LIMIT $2 OFFSET $3 `;
             const result = await conn.query(sql, [fk_userId, pageSize, (pageNumber - 1) * pageSize]);
             return result.rows;
         } catch (err) {

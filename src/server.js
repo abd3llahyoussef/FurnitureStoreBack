@@ -11,7 +11,7 @@ import ordersProductsRoute from './Routes/OrdersProducts.Route.js'
 import router from './Routes/pagination.routes.js'
 import authRouter from './Routes/Auth.Route.js'
 import adminRoute from './Routes/Admin.Route.js'
-
+import payRouter from './Routes/Pay.Route.js'
 import session from 'express-session'
 import passport from './passport.js'
 
@@ -51,6 +51,8 @@ categoryRoute(app);
 ordersRoute(app);
 ordersProductsRoute(app);
 adminRoute(app);
+payRouter(app);
+
 app.use('/api/pagination', router);
 
 app.listen(PORT, () => {
